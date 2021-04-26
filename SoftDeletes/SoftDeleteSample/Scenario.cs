@@ -78,10 +78,6 @@ namespace SoftDeleteSample
                 var result = dbContext.SaveChanges();
 
                 Assert.Equal(4, result); // The user, order and items will all have been affected
-                Assert.NotNull(user.DeletedOn); // Expect our order to have been soft-deleted
-                Assert.NotNull(order.DeletedOn); // Expect our orders to have been deleted as well
-                Assert.NotNull(orderItem1.DeletedOn); // Expect our items to have been deleted as well
-                Assert.NotNull(orderItem2.DeletedOn);
             });
         }
     }
