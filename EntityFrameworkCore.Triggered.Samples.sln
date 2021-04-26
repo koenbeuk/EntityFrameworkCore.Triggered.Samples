@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31213.239
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. SoftDeletes", "1. SoftDeletes", "{9676435D-F744-48F9-BD09-4125BB9EF905}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Transactions", "2. Transactions", "{75115190-7A57-4D7E-A2B5-A8A7CF79330B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transactions", "Transactions\Transactions.csproj", "{6CCC0F7F-824C-4F91-95DF-765CEB90BFB4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftDeleteSample", "SoftDeletes\SoftDeleteSample\SoftDeleteSample.csproj", "{2DEFE1D3-3C54-4222-88DD-7A057CE7CF50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. EFCore3.1", "3. EFCore3.1", "{293C56D8-1351-4603-81CB-FE3346C62B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore31", "EFCore31\EFCore31.csproj", "{27043A63-1582-48F1-82CD-08E810A24629}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CCC0F7F-824C-4F91-95DF-765CEB90BFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCC0F7F-824C-4F91-95DF-765CEB90BFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCC0F7F-824C-4F91-95DF-765CEB90BFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCC0F7F-824C-4F91-95DF-765CEB90BFB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DEFE1D3-3C54-4222-88DD-7A057CE7CF50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DEFE1D3-3C54-4222-88DD-7A057CE7CF50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DEFE1D3-3C54-4222-88DD-7A057CE7CF50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DEFE1D3-3C54-4222-88DD-7A057CE7CF50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27043A63-1582-48F1-82CD-08E810A24629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27043A63-1582-48F1-82CD-08E810A24629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27043A63-1582-48F1-82CD-08E810A24629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27043A63-1582-48F1-82CD-08E810A24629}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CCC0F7F-824C-4F91-95DF-765CEB90BFB4} = {75115190-7A57-4D7E-A2B5-A8A7CF79330B}
+		{2DEFE1D3-3C54-4222-88DD-7A057CE7CF50} = {9676435D-F744-48F9-BD09-4125BB9EF905}
+		{27043A63-1582-48F1-82CD-08E810A24629} = {293C56D8-1351-4603-81CB-FE3346C62B94}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A15B34B7-1A2A-41A7-BBCB-8538B60429D8}
+	EndGlobalSection
+EndGlobal
