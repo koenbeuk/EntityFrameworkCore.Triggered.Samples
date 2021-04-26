@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SoftDeleteSample.Triggers
 {
-    public class LoadCascadingEntitiesInDbContext : Trigger<ISoftDeletable>
+    public class LoadCascadingEntitiesInDbContext : Trigger<ISoftDeletable>, ITriggerPriority
     {
         readonly ApplicationDbContext _applicationDbContext;
 
@@ -17,6 +17,9 @@ namespace SoftDeleteSample.Triggers
         {
             _applicationDbContext = applicationDbContext;
         }
+
+        // We want this trigger to run before SoftDeleteOnRemoval since that one would cancel the cascading delete strategy
+        public int Priority => CommonTriggerPriority.Early;
 
         public override void BeforeSave(ITriggerContext<ISoftDeletable> context)
         {
