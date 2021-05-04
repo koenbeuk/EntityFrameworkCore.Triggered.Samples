@@ -12,12 +12,18 @@ namespace Transactions.Triggers
 {
     public class SentWelcomeEmail : IAfterCommitTrigger<User>
     {
-        public Task AfterCommit(ITriggerContext<User> context, CancellationToken cancellationToken)
+        private readonly ApplicationDbContext applicationDbContext;
+
+        public SentWelcomeEmail(ApplicationDbContext applicationDbContext)
+        {
+            this.applicationDbContext = applicationDbContext;
+        }
+
+        public async Task AfterCommit(ITriggerContext<User> context, CancellationToken cancellationToken)
         {
             // We're not actually sending an email as that's outside of the scope of this demo
             context.Entity.WelcomeEmailSentDate = DateTime.UtcNow;
-
-            return Task.CompletedTask;
+            await applicationDbContext.SaveChangesAsync();
         }
     }
 }
