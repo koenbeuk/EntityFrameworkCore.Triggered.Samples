@@ -23,7 +23,7 @@ namespace Transactions.Triggers
         {
             // We're not actually sending an email as that's outside of the scope of this demo
             context.Entity.WelcomeEmailSentDate = DateTime.UtcNow;
-            await applicationDbContext.SaveChangesAsync();
+            await applicationDbContext.SaveChangesAsync(CancellationToken.None);
         }
     }
 }

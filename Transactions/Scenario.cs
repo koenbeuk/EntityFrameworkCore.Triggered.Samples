@@ -15,7 +15,7 @@ namespace Transactions
     public partial class Scenario
     {
         [Scenario(NamingPolicy = ScenarioTestMethodNamingPolicy.Test)]
-        public async Task PlayScenario(ScenarioContext scenario)
+        public static async Task PlayScenario(ScenarioContext scenario)
         {
             // We need to manually manage a SqlLite connection if we want to work with inmemory databases
             // see: https://docs.microsoft.com/en-us/ef/core/testing/sqlite

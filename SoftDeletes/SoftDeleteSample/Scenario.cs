@@ -14,7 +14,7 @@ namespace SoftDeleteSample
     public partial class Scenario
     {
         [Scenario(NamingPolicy = ScenarioTestMethodNamingPolicy.Test)]
-        public void PlayScenario(ScenarioContext scenario)
+        public static void PlayScenario(ScenarioContext scenario)
         {
             // This represents a basic scenario where soft deletes can be useful.
             // This does not represent production ready code as it currently only soft-deletes entities that are being tracked by the DbContext!
